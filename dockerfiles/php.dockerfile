@@ -36,6 +36,12 @@ RUN apk add --no-cache \
         freetype-dev \
         && docker-php-ext-install gd
 
+Run apk add --no-cache \
+        git \
+        curl \
+        oniguruma-dev\
+        && docker-php-ext-install mbstring exif pcntl bcmath
+
 RUN mkdir -p /usr/src/php/ext/redis \
     && curl -L https://github.com/phpredis/phpredis/archive/5.3.4.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
     && echo 'redis' >> /usr/src/php-available-exts \
