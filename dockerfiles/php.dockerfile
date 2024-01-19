@@ -40,7 +40,7 @@ Run apk add --no-cache \
         git \
         curl \
         oniguruma-dev\
-        && docker-php-ext-install mbstring exif pcntl bcmath
+        && docker-php-ext-install mbstring exif pcntl bcmath calendar
 
 RUN mkdir -p /usr/src/php/ext/redis \
     && curl -L https://github.com/phpredis/phpredis/archive/5.3.4.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
